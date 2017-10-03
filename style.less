@@ -13,6 +13,7 @@ body {
     z-index: -1;
 }
 
+
 .minto_main-container {
     display: flex;    
     flex-direction: column;    
@@ -20,8 +21,9 @@ body {
 
     .minto_header {
         display: flex;
-        width: @main-width;       
-        
+        flex-wrap: wrap;
+        width: @main-width;
+
         .minto_headline {            
             display: flex; 
             flex-direction: column;
@@ -52,7 +54,7 @@ body {
             background: radial-gradient(#cabfd5, #947fab);
             color: #ffffff;
             -webkit-border-radius: 130px;    
-            opacity: 0.5;     
+            opacity: 1;     
         }
     }
 
@@ -63,4 +65,21 @@ body {
         max-width: @main-width;        
         background-color:#947fab;
     }
+
+    .nav-container {
+        display: flex;
+        flex-direction: row;
+      }
+
+      @media (max-width: 600px) {
+        .minto_header {
+            flex-direction: column;
+        }
+    
+        .nav-container {
+            flex-direction: column;
+        }
+      }
 }
+
+
